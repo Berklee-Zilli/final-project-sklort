@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Implementation/Documentation</title>
+    <link rel="stylesheet" href="HTMLDocu.css">
+</head>
+<body id="background">
+    <h1 class="not"> HTML Terms</h1>
+    <p class="not">first is the order list. it is made by using the ol tag and key. You will need to populate list items to contain the list items within itself.</p>
+    <p class="not">CHALLENGE: MAKE An ORDERED LIST OF YOUR FAVORITE THINGS</p>
+    <p class="not">example</p>
+    <ol class="not">
+        <li>cats</li>
+        <li>dogs</li>
+        <li>statements</li>
+        <li>differing positions</li>
+        <li>pets</li>
+    </ol>
+    <p class="not">second is the unordered list</p>
+    <h2 class="not">CHALLENGE MAKE A LIST UNORDERED OF YOUR HOBBIES</h2>
+    <p class="not">Example</p>
+    <ul class="not">
+        <li>programing</li>
+        <li>sleepping</li>
+        <li>conditionals</li>
+        <li>pets</li>
+        <li>two tiered vertical system</li>
+        <li>sewing</li>
+        <li>sewing pieces into positions</li>
+    </ul>
+    <p class="not">Third is the paragrpah. it is used by making the paragraph tag. Try to make it.</p>
+    <h2 class="not">CHALLENGE</h2>
+    <h3 class="not"> EXAMPLE</h3>
+    <p class="not">Hypertext Markup Language (HTML) is the standard markup language for websites designed to be displayed within binaries of a web browser. It defines the styling and architecture system vertically of designed enabling the separation of content and presentation, including layout, colors, and fonts.[4] This separation can improve content accessibility, since the content can be written without concern for its presentation and without concern for vagueries.</p>
+    <h2 class="not"> next is videos and audios</h2>
+    <p id="textDist">this is my cat. learn and try to make you own presentation.</p>
+    <video controls loop mute>
+        <source src="CatVid.mp4" type="video/mp4">
+    
+    </video>
+    <br>
+    <button id ="audio">click for my cat</button>
+<script>
+    function changeBGColor() {
+  var hidden = document.getElementsByClassName('not');
+  for(i = 0; i < hidden.length; i++) {
+    hidden[i].style.display="none";
+  }
+}
+let button = document.getElementById("audio");
+let background = document.getElementById("background")
+
+    function playAudio(){
+        let audio = new Audio("CatVid.wav");
+        audio.play();
+        changeBGColor();
+        button.classList.add("hidden");
+        setInterval(function () {background.classList.toggle("black")}, 700)
+        function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
+        sleep(12000).then(() => {window.location.href = "ThirdLesson.html";});
+        }
+    button.addEventListener("click", playAudio);
+</script>
+</body>
+</html>
