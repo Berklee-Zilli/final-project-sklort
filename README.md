@@ -1,5 +1,6 @@
 # final-project-sklort
-final-project-sklort created by GitHub Classroom
+final-project-sklort created by GitHub Classroom. Project by Toby Hurrell.
+
 I used w3schools, Mozilla Developer, https://htmlcheatsheet.com/css/, and copied text from Wikipedia for this project.
 No AI was used. 
 
