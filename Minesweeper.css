@@ -1,0 +1,19 @@
+body {
+    background-color: gray;
+}
+h1{
+    font-family: Impact, Charcoal, sans-serif;
+    z-index: 0;
+}
+
+p {
+    font-family: Impact, Charcoal, sans-serif;
+    z-index: 0;
+}
+
+.ontop {
+    position:relative;
+    z-index: 1;
+    background-color: rgb(255, 0, 0);
+
+}

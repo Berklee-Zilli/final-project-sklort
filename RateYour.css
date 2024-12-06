@@ -1,0 +1,30 @@
+
+#background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+
+
+h1 {
+    color: red;
+}
+
+body {
+    background-color: yellow;
+}
+
+.blue { 
+  color: blue;
+}
+
+.warp {
+  position:absolute; 
+  top: 100px; left: 100px; 
+  transform: scale(1.5)skew(-74deg, 51deg);
+  text-shadow: -4px 4px hsla(0, 0%, 70%, .4), -3px 3px hsla(0, 0%, 60%, .2), -2px 2px hsla(0, 0%, 70%, .2), -1px 1px hsla(0, 0%, 70%, .2), 0px 0px hsla(0, 0%, 50%, .5), 1px -1px hsla(0, 0%, 30%, .6), 2px -2px hsla(0, 0%, 30%, .7), 3px -3px hsla(0, 0%, 32%, .8), 4px -4px hsla(0, 0%, 30%, .9), 5px -5px hsla(0, 0%, 30%, 1.0);
+}

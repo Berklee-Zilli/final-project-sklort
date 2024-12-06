@@ -1,0 +1,14 @@
+body {
+    background-color: red;
+}
+
+.flicker {
+    position:absolute;
+    text-shadow: -15px -3px 7px #8BA41E;
+    color: white;
+    transform: scale(1.2) rotate(1deg) translate(28px, 20px);
+}
+
+.bnw {
+    background-color: gray;
+}

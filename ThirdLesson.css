@@ -1,0 +1,39 @@
+.warp {
+    position: relative;
+    color: blue;
+    transform: rotate(7deg) translate(2px, 0px) skew(79deg, -9deg);
+    text-shadow: -23px 5px 7px #3CA495;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 10px; 
+    letter-spacing: 10px;  
+}
+
+.title {
+    font-family: "Arial Black", Gadget, sans-serif;
+font-size: 30px;
+letter-spacing: -5px;
+word-spacing: -5px;
+color: #000000;
+font-weight: 700;
+text-decoration: line-through solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: small-caps;
+text-transform: capitalize;
+color:pink;
+}
+.background {
+    background-color: black;
+}
+
+#button {
+    font-size: 30px;
+}
+
+.buttonFlick {
+    position:sticky;
+    top: 20px;
+    color: white;
+    letter-spacing: 10px;
+    font-size: 100px;
+    height: 600px;
+}

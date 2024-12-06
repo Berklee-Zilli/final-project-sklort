@@ -1,0 +1,35 @@
+h1 {
+    transform: scale(1.1) translate(-5px, 2px);
+    color: red
+}
+
+@keyframes blink {
+    from {color: red;font-family: Impact, Charcoal, sans-serif;
+        font-size: 19px;
+        letter-spacing: -2.2px;
+        word-spacing: 2px;
+        color: #fbfbfb;
+        font-weight: 700;
+        text-decoration: overline solid rgb(68, 68, 68);
+        font-style: normal;
+        font-variant: normal;
+        text-transform: none;
+    }
+    to {color: blue;
+        transform: scale(1.05) rotate(1deg) translate(1px, 5px) skew(-1deg, 1deg);}
+}
+.p{
+    animation-name: blink; 
+    animation-duration:5s;
+    animation-iteration-count: infinite;
+}
+
+
+
+button{
+    font-size: 40px;
+}
+
+body {
+    background-color: rgb(187, 204, 216)
+}

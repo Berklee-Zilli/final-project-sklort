@@ -1,0 +1,19 @@
+#text {
+    color:rgb(0, 0, 104);
+    background-color: rgb(255, 213, 213);
+}
+
+
+.email{
+    height: 20px;
+    width: 240px;
+}
+
+.feedback{
+    height: 100px;
+    width: 240px;
+}
+button {
+    height: 30px;
+    width: 250px;
+}

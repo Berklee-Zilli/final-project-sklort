@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mine</title>
+    <link rel="stylesheet" href="PageHome.css">
+</head>
+<body id="bg">
+    <p id="adhere">not adhering not adheringnot adhering not adhering not adhering not adhering not adhering not adhering not adhering not adhering not adhering not adhering not adhering not adhering not adhering not adhering not adhering not adhering not adhering not adhering not adhering not adhering not adhering not adhering not adhering not adhering not adhering not adhering</p>
+    <h1>this is my page</h1>
+    <p>i'll put lessons here for you for my class</p>
+   <button id="second"> <h1 id="text">YES NO</h1></button>
+    <button id="firstButton">more lessons programming</button>
+    <h1>more lessons here, </h1>
+    <video src="CatVid.mp4" autoplay muted loop id="video"></video>
+<script>
+    let adhere = document.getElementById("adhere");
+    adhere.style.display="none";
+    let buttonOne = document.getElementById("firstButton");
+    buttonOne.style.fontSize="40px";
+    let buttonTwo = document.getElementById("second");
+    let yesText = document.getElementById("text");
+    function yes () {
+        yesText.style.display="inline";
+    }
+    function bomb () {
+        let video = document.getElementById("video");
+        let audio = new Audio("HomeDistort.mp3");
+        audio.play()
+        let bg = document.getElementById("bg");
+        bg.classList.add("black");
+        buttonTwo.innerHTML="0 1 complete";
+        function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
+        sleep(2000).then(() => {bg.classList.toggle("black")});
+        sleep(5000).then(() => {bg.classList.toggle("black")});
+        sleep(9000).then(() => {bg.classList.toggle("black")});
+        sleep(9000).then(() => {video.style.display="none"});
+        sleep(14000).then(() => {bg.classList.toggle("black")});
+        sleep(17000).then(() => {bg.classList.toggle("black")});
+        sleep(22000).then(() => {bg.classList.toggle("black")});
+        sleep(22000).then(() => {buttonOne.style.display="none"});
+        sleep(22000).then(() => {adhere.style.display="inline"});
+        sleep(30000).then(() => {window.location.href = "FourthLesson.html";});
+    }
+    buttonOne.addEventListener("click", yes);
+    buttonTwo.addEventListener("click", bomb);
+</script>
+</body>
+</html>

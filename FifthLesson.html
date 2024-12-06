@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn</title>
+    <link rel="stylesheet" href="FifthLesson.css">
+</head>
+<body>
+    <h1 id="header">video lesson this time</h1>
+    <button id="button">Click for lesson.</button>
+    <video src="fifthEdit.mp4" width="600" id="video" autoplay muted></video>
+<script>
+    let button = document.getElementById("button");
+    let video = document.getElementById("video");
+    let header = document.getElementById("header");
+    video.style.display="none";
+    function playVid () {
+        function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
+        sleep(48000).then(() => {window.location.href = "SixthLesson.html";});
+        video.style.display="inline";
+        let audio = new Audio("fifth.mp3");
+        audio.play();
+        header.style.display="none";
+        button.style.display="none";
+
+    }
+    button.addEventListener("click", playVid);
+</script>
+</body>
+</html>

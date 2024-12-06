@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3</title>
+    <link rel="stylesheet" href="ThirdLesson.css">
+</head>
+<body id="background">
+    <h1>Conditionals.</h1>
+    <p>If statements are conditioanls which track if the information being processed match the equation to perform the final computation to perform the equation found in the if statement.</p>
+    <p>Conditionals track the conditions need neccesary to meet the requirements for the computatation equation. IF it is not met then it will not be computed and the conditional will not be satisfied to compute the equation, thus not satisfying the necessary function or variable for means to compute the computational equation.</p>
+    <p id="warp">Conditionals can be found in many different functions and are used to satifsy a parameter or requirement where they will be used or need to be met for the requirement to process, including a loop or for loop or while loop. The conditionals will be found in the loop to meet the satisfactory requirement to end the process and then compute the equation.</p>
+    <h2 id="warpTwo">This is what a conditional can be used for to satisfy the requirement of the processing equation. It will satisfy the  binary and give you the desired processing computational result. </h2>
+    <h3 id="warp3">click the button below for an example of conditional statements for computational processing and equation satisfaction. </h3>
+    <button id="button">Conditional button.</button>
+<script>
+    i = 0;
+    function onPush() {
+        i++;
+        if (i == 1) {
+            let audioOne = new Audio ("");
+            audioOne.play();
+            let warp = document.getElementById("warp");
+            warp.classList.toggle("warp");
+        }
+        if (i == 2){
+            let audioTwo = new Audio ("");
+            audioTwo.play();
+            let warpTwo = document.getElementById("warpTwo");
+            warpTwo.classList.toggle("title");
+        }
+        if (i == 3){
+            let audioThree = new Audio ("");
+            audioThree.play();
+            let background = document.getElementById("background")
+            background.classList.add("background");
+        }
+        if (i ==4) {
+            let audioFour = new Audio ("");
+            audioFour.play();
+            let buttonFlick = document.getElementById("button");
+            setInterval(setInterval(function () {background.classList.toggle("background")}, 300));
+            setInterval(setInterval(function () {buttonFlick.classList.toggle("buttonFlick")}, 500));
+        }
+        if (i==5) {
+            function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
+            let audioFive = new Audio("");
+            audioFive.play();
+            sleep(2000).then(() => {window.location.href = "Minesweeper.html";});
+
+        }
+    }
+let button = document.getElementById("button")
+button.addEventListener("click", onPush)
+</script>
+</body>
+</html>

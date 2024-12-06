@@ -1,0 +1,17 @@
+body {
+    background-color: bisque;
+}
+#text {
+    font-size: 150px;
+    color: red;
+    letter-spacing: 5px;
+    display: none;
+}
+
+.black{
+    background-color: black;
+}
+
+#adhere {
+    color:white;
+}

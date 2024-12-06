@@ -1,0 +1,9 @@
+h1 { 
+    text-align: center; 
+    letter-spacing: 5px;
+}
+a:hover{
+    text-decoration:line-through;
+    letter-spacing: 10px;
+    color: black;
+}

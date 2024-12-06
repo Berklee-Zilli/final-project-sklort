@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RateYourExperience</title>
+    <link rel="stylesheet" href="RateYour.css">
+
+</head>
+<body>
+    <video autoplay muted loop id="background"> 
+        <source src="yellowGlitch.mp4" type="video/mp4">
+    </video>
+    <h1 id="header">Please rate your experience.</h1>
+    <p>Let me know how you like the website! i know its buggy, but please rate it!</p>
+        <button id="myBtn">
+            <img src="star.png" width="50" alt="a blank star">
+            <img src="star.png" width="50" alt="a blank star">
+            <img src="star.png" width="50" alt="a blank star">
+            <img src="star.png" width="50" alt="a blank star">
+            <img src="star.png" width="50" alt="a blank star">
+        </button>
+    <br>
+<script>
+    const myHeader = document.getElementById("header");
+    const button = document.getElementById("myBtn");
+    setInterval(function () {myHeader.classList.toggle("blue")}, 350);
+
+    let play = document.getElementById("myBtn");
+    function btnClick() {
+        function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
+        sleep(5000).then(() => { setInterval(function () {myHeader.classList.toggle("warp")}, 200); });
+        sleep(6000).then(() => {window.location.href = "DistortHome.html";});
+        let audio = new Audio("RateYour.mp3"); 
+        audio.play();}
+    
+
+    play.addEventListener("click", btnClick);
+</script> 
+</body>
+</html>

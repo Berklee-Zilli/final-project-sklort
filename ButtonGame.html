@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <link rel="stylesheet" href="ButtonGame.css">
+</head>
+<body>
+    <h1 id="flicker">binary is an on or an off</h1>
+    <p>Click below!</p>
+    <input type="button" value="on" id="onoff" onclick="onoff();" onclick="addcount();">
+    <br> 
+    <br> 
+    <button id="fake">On</button>
+<script>
+    var initialcount = 0;
+    document.getElementById('fake').style.display ='none';
+    function onoff(){
+  currentvalue = document.getElementById('onoff').value;
+  if(currentvalue == "off"){
+    document.getElementById("onoff").value="on";
+    currentcount = initialcount++;
+  }else{
+    document.getElementById("onoff").value="off";
+    currentcount = initialcount++;
+    if (currentcount > 5) {
+  document.getElementById('fake').style.display ='inline';}}
+}
+bnw = document.body
+flicker = document.getElementById("flicker");
+function playAudio () {
+  let audio = new Audio("onOff.mp3");
+  audio.play();
+  function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
+  sleep(10000).then(() => {window.location.href = "SecondLesson.html";});
+  setInterval(setInterval(function () {flicker.classList.toggle("flicker")}, 900))
+  setInterval(setInterval(function () {bnw.classList.toggle("bnw")}, 1100))
+}
+let fake = document.getElementById("fake");
+fake.addEventListener("click", playAudio);
+
+</script>
+</body>
+</html>

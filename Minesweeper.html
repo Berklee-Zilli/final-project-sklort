@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minesweeper</title>
+    <link rel="stylesheet" href="Minesweeper.css">
+</head>
+<body id="background">
+    <h2 class="not">play the conditional game. It works on conditionals computing process.</h2>
+    <h1 class="not">minesweeper</h1>
+    <h2 class="not">you will find the bombs in the conditional game. if you click on the bomb incorrectly, it will explode. if you do not, it will not explode. try to win the conditional game.</h2>
+    <p class="not">minesweeper</p>
+    <button id="button" class="not">
+        <image src="minesweeper.jpg" alt="minesweeper" height="300px"></image>>
+    </button>
+    <button id="buttonTwo" class="not">
+        <image src="minesweeper.jpg" alt="minesweeper" height="300px"></image>>
+    </button>
+    <h1 class="not">try the game</h1>
+<script>
+    let latent = new Audio("MineBacks.mp3");
+    let button = document.getElementById("button");
+    let buttonTwo = document.getElementById("buttonTwo");
+    button.style.display="none";
+    function first () {
+        function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
+        latent.play()
+        buttonTwo.style.display="none";
+        sleep(6000).then(() => {button.style.display="inline" });
+    }
+    function explode () {
+        latent.pause();
+        function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
+        let background = document.getElementById("background");
+        setInterval(function () {background.classList.toggle("ontop")}, 200); 
+        let audio = new Audio ("explode.mp3");
+        audio.play();
+        sleep(4000).then(() => { window.location.href = "Feedback.html";});
+        var hidden = document.getElementsByClassName('not');
+         for(i = 0; i < hidden.length; i++) {
+            hidden[i].style.display="none";
+            }
+    }
+    button.addEventListener("click", explode);
+    buttonTwo.addEventListener("click", first);
+</script>
+</body>
+</html>

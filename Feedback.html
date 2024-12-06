@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate it</title>
+    <link rel="stylesheet" href="Feedback.css">
+</head>
+<body id ="background">
+    <h1>Rate me</h1>
+    <button id="firstRate">
+        <img src="star.png" width="100px">
+        <img src="star.png" width="100px">
+        <img src="star.png" width="100px">
+        <img src="star.png" width="100px">
+        <img src="star.png" width="100px">
+    </button>
+    <button id="buttonTwo">
+        <img src="up.jpg" width="100px" alt="yes">
+        rate
+        <img src="down.jpg" width="100px" alt="no">
+
+    </button>
+    <video src="distortAbout.mp4" width="600px" id = "video"></video>
+<script>
+    let audio = new Audio ("pleaseRate.mp3");
+    let buttonTwo = document.getElementById("buttonTwo");
+    buttonTwo.style.display="none";
+    let bg = document.getElementById("background");
+    let buttonOne = document.getElementById("firstRate");
+    let video = document.getElementById("video");
+    video.style.display="none"
+    function start () {
+        audio.loop="true";
+        audio.play();
+        bg.classList.add("black");
+        buttonOne.style.display="none";
+        buttonTwo.style.display="inline";
+    }
+    function end() {
+        function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
+        let videoAud = new Audio("distortAbout.mp3");
+        videoAud.play();
+        buttonTwo.style.display="none"
+        video.style.display="inline";
+        video.play();
+        audio.pause();
+        sleep(20500).then(() => {window.location.href = "GradePage.html";});
+    }
+    buttonOne.addEventListener("click", start);
+    buttonTwo.addEventListener("click", end);
+</script>
+</body>
+</html>

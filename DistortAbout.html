@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="DistortAbout.css">
+</head>
+<body>
+    <h1>this semester, I am taking a programing class. These are my notes !</h1>
+    <button id="myBtn">Click for feedback!</button>
+    <p id="paragraph">I am a fourth semester student, and wanted to learn how to code a website, so I joined this course! </p>
+    <p class="text">in this course, we will be going over Python, JavaScript, Binary, C#, HTML, CSS, and apparently more! </p>
+    <p id="text">My end goal is to have a fully functioning website</p>
+    <p class="text">Please let me know about any changes i can make or problems you are having below! :)</p>
+    <input class="email" type="text">your email
+    <br>
+    <input class="feedback" type="text" >your feedback
+
+    <script>
+    let text = document.getElementById("paragraph");
+    let para = document.getElementById("text");
+    let play = document.getElementById("myBtn");
+    setInterval(function () {text.classList.toggle("p")}, 1000);
+    setInterval(function () {para.classList.toggle("p")}, 890);
+    function btnClick() {
+        let audio = new Audio("distortAbout.mp3"); 
+        audio.play();
+        function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
+        sleep(8000).then(() => {window.location.href = "DistortHome.html";});
+    }
+    
+
+    play.addEventListener("click", btnClick);
+    </script>
+</body>
+</html>

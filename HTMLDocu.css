@@ -1,0 +1,16 @@
+h1 { 
+    letter-spacing: 100px;
+    text-align: center;
+}
+body{
+    background-color: aqua;
+}
+.hidden{
+    display:none;
+}
+#audio{
+    font-size:40px;
+}
+.black{
+    background-color:black;
+}

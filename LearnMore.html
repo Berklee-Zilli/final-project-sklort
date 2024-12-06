@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+    <link rel="stylesheet" href="LearnMore.css">
+</head>
+<body id="bg">
+    <h1 id="click">click</h1>
+    <button id="button">0</button>
+    <h1 id="adhere">adhered</h1>
+    <button id="not">
+        <img src="star.png" width="100px">
+        <img src="star.png" width="100px">
+        <img src="star.png" width="100px">
+        <img src="star.png" width="100px">
+        <img src="star.png" width="100px">
+    </button>
+    <img src="up.jpg" id="up" width="400">
+    <img src="down.jpg" id="down" width="400">
+<script>
+    let button = document.getElementById("button");
+    let header = document.getElementById("click");
+    let bg = document.getElementById("bg");
+    let clicker = document.getElementById("not");
+    let up = document.getElementById("up")
+    let down = document.getElementById("down")
+    let adhere = document.getElementById("adhere")
+    down.style.display="none";
+    up.style.display="none";
+    clicker.style.display="none";
+    function clear () {
+        function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
+        button.style.display="none";
+        header.style.display="none";
+        bg.classList.add("black");
+        let harsh = new Audio("final.mp3");
+        harsh.play();
+        sleep(11000).then(() => {clicker.style.display="inline";});
+        sleep(20000).then(() => {bg.classList.remove("black");})
+        sleep(24000).then(() => {clicker.style.display="none";})
+        sleep(30000).then(() => {bg.classList.toggle("black");})
+        sleep(30500).then(() => {bg.classList.toggle("black");})
+        sleep(31000).then(() => {bg.classList.toggle("black");})
+        sleep(32000).then(() => {bg.classList.toggle("black");})
+        sleep(34000).then(() => {bg.classList.toggle("black");})
+        sleep(40000).then(() => {clicker.style.display="inline";});
+        sleep(46000).then(() => {clicker.style.display="none";});
+        sleep(48000).then(() => {up.style.display="inline";});
+        sleep(52000).then(() => {up.style.display="none";});
+        sleep(52000).then(() => {down.style.display="inline";});
+        sleep(52000).then(() => {bg.classList.toggle("black");});
+        sleep(58000).then(() => {down.style.display="none";});
+        sleep(58000).then(() => {bg.classList.toggle("black");});
+        sleep(59999).then(() => {bg.classList.toggle("black");});
+        sleep(59999).then(() => {adhere.style.display="none";});
+        
+
+    }
+    button.addEventListener("click", clear)
+</script>
+</body>
+</html>

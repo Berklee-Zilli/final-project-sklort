@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1</title>
+    <link rel="stylesheet" href="FirstLesson.css">
+</head>
+<body>
+    <h1>Lesson 1 - Intro to Binary!</h1>
+    <h2 id="onoff">binary consists of on off statements - in the form of 1 and 0.</h2>
+    <p>Under the hood of all computers is binary - simple 0 and 1. tthey can represent many different functions, and are used to compute many things. Life consists of binaries - of either or. </p>
+    <p>calculating binary is simple. For each binary statement, there are 8 binary numbers. Each represents a power of 2. </p>
+    <p>Start counting the two's in ascending order, and then add them up. for instance, 011.  1 + 2 +0 =3. </p>
+    <a href ="ButtonGame.html" alt="buttongame">Click here for a visual explainer!</a>
+
+<script>
+    let onoff = document.getElementById("onoff")
+    setInterval(function () {onoff.classList.toggle("flicker")}, 1000);
+</script>
+</body>
+</html>
